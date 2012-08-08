@@ -1,18 +1,18 @@
+# Default
 [user]
 	name = Sean Gravener
 	email = sean@gravener.net
-[color]
-	ui = true
-[gui]
-	recentrepo = C:/xampp/htdocs/myars-local
 [alias]
- 	st = status
+	st = status
 	ci = commit
 	br = branch
 	co = checkout
 	df = diff
 	dc = diff --cached
-	lg = log -p
+	
+	# http://superuser.com/a/169702
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
@@ -37,6 +37,8 @@
 	untracked = cyan
 [format]
 	pretty = oneline
+
+# Customize editor and diff tools:
 [core]
 	editor = 'c:/Program Files (x86)/git/cmd/edit.sh'
 [diff]
